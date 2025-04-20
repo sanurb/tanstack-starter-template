@@ -9,11 +9,16 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.0",
     "@tailwindcss/postcss": "^4.1.4",
     "@tailwindcss/vite": "^4.1.4",
     "@tanstack/react-router": "^1.116.0",
     "@tanstack/react-router-devtools": "^1.116.0",
     "@tanstack/react-start": "^1.116.2",
+    "@tanstack/start": "^1.116.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.501.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.2.0",
@@ -27,6 +32,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4",
+    "tw-animate-css": "^1.2.7",
     "typescript": "^5.8.3",
     "ultracite": "4.2.1",
     "vite-tsconfig-paths": "^5.1.4"
