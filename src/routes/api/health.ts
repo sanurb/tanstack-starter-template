@@ -1,21 +1,22 @@
+import { Status } from '@reflet/http';
 import { json } from '@tanstack/react-start';
 import { createAPIFileRoute } from '@tanstack/react-start/api';
-
-const startTime = Date.now();
+import { setHeaders } from '@tanstack/react-start/server';
+import { getUptimeInfo } from '~/lib/uptime';
 
 export const APIRoute = createAPIFileRoute('/api/health')({
   GET: () => {
-    const uptime = (Date.now() - startTime) / 1000; // in seconds
+    const { uptime, timestamp } = getUptimeInfo();
 
     const healthPayload = {
       status: 'ok',
       uptime,
-      timestamp: new Date().toISOString(),
+      timestamp,
     };
 
-    const headers = new Headers();
-    headers.set('Cache-Control', 'no-cache');
-
-    return json(healthPayload, { status: 200, headers });
+    setHeaders({
+      'Cache-Control': 'no-cache',
+    });
+    return json(healthPayload, { status: Status.Ok });
   },
 });

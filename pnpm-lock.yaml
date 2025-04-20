@@ -11,6 +11,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.0
         version: 1.2.0(@types/react@19.1.2)(react@19.1.0)
+      '@reflet/http':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@tailwindcss/postcss':
         specifier: ^4.1.4
         version: 4.1.4
@@ -1070,6 +1073,10 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@reflet/http@1.0.0':
+    resolution: {integrity: sha512-/wOfIH2eJ3Pph3g+CyFC0sXwDmGO+vdejTpAvz94S3/027x5ItGgdwUJbYZbec9OEEs1KKoHtYi9ZawI/Vsr+A==}
+    engines: {node: '>=10'}
 
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
@@ -4754,6 +4761,8 @@ snapshots:
       react: 19.1.0
     optionalDependencies:
       '@types/react': 19.1.2
+
+  '@reflet/http@1.0.0': {}
 
   '@rollup/plugin-alias@5.1.1(rollup@4.40.0)':
     optionalDependencies:
