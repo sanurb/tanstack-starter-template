@@ -29,6 +29,9 @@ importers:
       '@tanstack/start':
         specifier: ^1.116.2
         version: 1.116.2(@netlify/blobs@8.2.0)(@types/node@22.14.1)(db0@0.3.2)(ioredis@5.6.1)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.39.0)(tsx@4.19.3)(vite@6.3.2(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
+      ansis:
+        specifier: ^3.17.0
+        version: 3.17.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -47,13 +50,22 @@ importers:
       tailwind-merge:
         specifier: ^3.2.0
         version: 3.2.0
+      type-fest:
+        specifier: ^4.40.0
+        version: 4.40.0
       vinxi:
         specifier: 0.5.4
         version: 0.5.4(@netlify/blobs@8.2.0)(@types/node@22.14.1)(db0@0.3.2)(ioredis@5.6.1)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      zod:
+        specifier: ^3.24.3
+        version: 3.24.3
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
+      '@total-typescript/ts-reset':
+        specifier: ^0.6.1
+        version: 0.6.1
       '@types/node':
         specifier: ^22.14.1
         version: 22.14.1
@@ -1506,6 +1518,9 @@ packages:
   '@tanstack/virtual-file-routes@1.115.0':
     resolution: {integrity: sha512-XLUh1Py3AftcERrxkxC5Y5m5mfllRH3YR6YVlyjFgI2Tc2Ssy2NKmQFQIafoxfW459UJ8Dn81nWKETEIJifE4g==}
     engines: {node: '>=12'}
+
+  '@total-typescript/ts-reset@0.6.1':
+    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -5619,6 +5634,8 @@ snapshots:
   '@tanstack/store@0.7.0': {}
 
   '@tanstack/virtual-file-routes@1.115.0': {}
+
+  '@total-typescript/ts-reset@0.6.1': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
