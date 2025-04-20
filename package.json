@@ -4,9 +4,14 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "lint": "biome lint",
+    "lint:fix": "biome lint --fix",
+    "format": "biome format",
+    "format:check": "biome check --write",
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start"
+    "start": "vinxi start",
+    "ui": "pnpm dlx shadcn@latest add"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
