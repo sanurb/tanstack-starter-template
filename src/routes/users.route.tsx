@@ -1,30 +1,30 @@
-import { Link, Outlet, createFileRoute } from '@tanstack/react-router'
-import { DEPLOY_URL } from '../utils/users'
-import type { User } from '../utils/users'
+import { Link, Outlet, createFileRoute } from '@tanstack/react-router';
+import { DEPLOY_URL } from '../utils/users';
+import type { User } from '../utils/users';
 
 export const Route = createFileRoute('/users')({
   loader: async () => {
     try {
-      const res = await fetch(DEPLOY_URL + '/api/users')
+      const res = await fetch(DEPLOY_URL + '/api/users');
       if (!res.ok) {
-        throw new Error('Unexpected status code')
+        throw new Error('Unexpected status code');
       }
 
-      const data = (await res.json()) as Array<User>
+      const data = (await res.json()) as Array<User>;
 
-      return data
+      return data;
     } catch {
-      throw new Error('Failed to fetch users')
+      throw new Error('Failed to fetch users');
     }
   },
   component: UsersLayoutComponent,
-})
+});
 
 function UsersLayoutComponent() {
-  const users = Route.useLoaderData()
+  const users = Route.useLoaderData();
 
   return (
-    <div className="p-2 flex gap-2">
+    <div className="flex gap-2 p-2">
       <ul className="list-disc pl-4">
         {[
           ...users,
@@ -43,11 +43,11 @@ function UsersLayoutComponent() {
                 <div>{user.name}</div>
               </Link>
             </li>
-          )
+          );
         })}
       </ul>
       <hr />
       <Outlet />
     </div>
-  )
+  );
 }
