@@ -1,0 +1,46 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 25
+    versioning-strategy: increase
+    allow:
+      - dependency-name: "@tailwindcss/*"
+      - dependency-name: "@tanstack/*"
+      - dependency-name: "react*"
+      - dependency-name: "typescript"
+      - dependency-name: "@types/*"
+      - dependency-name: "vite*"
+      - dependency-name: "vinxi"
+      - dependency-name: "tailwindcss"
+
+    groups:
+      TanStack:
+        patterns:
+          - "@tanstack/*"
+
+      React:
+        patterns:
+          - "react*"
+          - "@types/react*"
+
+      Tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+
+      Vite:
+        patterns:
+          - "vite*"
+
+      TypeScript:
+        patterns:
+          - "typescript"
+          - "@types/*"
+
+      Vinxi:
+        patterns:
+          - "vinxi"
