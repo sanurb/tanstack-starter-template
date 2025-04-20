@@ -3,6 +3,10 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=9.6.0"
+  },
   "scripts": {
     "lint": "biome lint",
     "lint:fix": "biome lint --fix",
@@ -11,7 +15,9 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "ui": "pnpm dlx shadcn@latest add"
+    "typecheck": "tsc --noEmit",
+    "ui": "pnpm dlx shadcn@latest add",
+    "deps": "pnpm dlx npm-check-updates@latest --interactive --format group"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
